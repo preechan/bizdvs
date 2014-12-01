@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Edit', edit_contractor_path(@contractor), class:"btn btn-link" %> |
+<%= link_to 'Back', contractors_path , class:"btn btn-link"%>
+<div class="row">
+  <div class="col-md-6">
+<p>
+  <strong>Name:</strong>
+  <%= @contractor.name %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @contractor.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @contractor.email %>
+</p>
+
+<p>
+  <strong>First Name:</strong>
+  <%= @contractor.firstname %>
+</p>
+
+<p>
+  <strong>Last Name:</strong>
+  <%= @contractor.lastname %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @contractor.address %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @contractor.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @contractor.state %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @contractor.zipcode %>
+</p>
+</div>
+<div class="col-md-6">
+
+<p>
+  <strong>License No:</strong>
+  <%= @contractor.licenseNo %>
+</p>
+
+<p>
+  <strong>License Class:</strong>
+  <%= @contractor.licenseClass %>
+</p>
+
+<p>
+  <strong>Bonding Capacity:</strong>
+  <%= @contractor.bondingcapacity %>
+</p>
+
+<p>
+  <strong>Trade:</strong>
+  <%= @contractor.trade %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @contractor.comments %>
+</p>
+</div>
+</div>
+

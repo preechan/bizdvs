@@ -1,0 +1,1 @@
+json.extract! @contractor, :id, :name, :licenseNo, :licenseClass, :bondingcapacity, :firstname, :lastname, :address, :city, :state, :zipcode, :phone, :email, :trade, :comments, :created_at, :updated_at
