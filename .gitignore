@@ -15,3 +15,6 @@
 /log/*.log
 /tmp
 /config/application.yml
+
+#ignore files uploaded on localhost
+/public/system
