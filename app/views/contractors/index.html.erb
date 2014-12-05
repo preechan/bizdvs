@@ -26,7 +26,6 @@
   <tbody>
     <% @contractors.each do |contractor| %>
       <tr>
-       <td> <%= image_tag contractor.logo.url(:thumb) %> </td> 
         <td><%= contractor.name %></td>
         <td><%= contractor.licenseNo %></td>
         <td><%= contractor.licenseClass %></td>
