@@ -1,5 +1,5 @@
 class Contractor < ActiveRecord::Base
-	if Rails.end.development?
+	if Rails.env.development?
 		has_attached_file :logo, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/small35.png"
 	else
 	 has_attached_file :logo, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/small35.png",
