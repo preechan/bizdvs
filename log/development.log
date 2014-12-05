@@ -2947,3 +2947,1529 @@ Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-12-02 
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-02 12:50:04 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAttachmentLogoToContractors (20141205212358)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "contractors" ADD "logo_file_name" varchar(255)[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "contractors" ADD "logo_content_type" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "contractors" ADD "logo_file_size" integer[0m
+  [1m[35m (0.1ms)[0m  ALTER TABLE "contractors" ADD "logo_updated_at" datetime
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20141205212358"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-05 13:36:55 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ContractorsController#index as HTML
+  [1m[35mContractor Load (0.6ms)[0m  SELECT "contractors".* FROM "contractors"
+  Rendered contractors/index.html.erb within layouts/application (31.7ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 464ms (Views: 444.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2014-12-05 13:36:56 -0800
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-12-05 13:36:56 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 13:36:56 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 13:36:56 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 13:36:56 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 13:36:56 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 13:36:56 -0800
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2014-12-05 13:36:56 -0800
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-05 13:36:56 -0800
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-05 13:36:56 -0800
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-05 13:36:56 -0800
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-05 13:36:56 -0800
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-05 13:36:56 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-05 13:36:56 -0800
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-05 13:36:56 -0800
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-05 13:36:56 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-05 13:36:56 -0800
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-05 13:36:56 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-05 13:36:56 -0800
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-05 13:36:56 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-12-05 13:36:56 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 13:36:56 -0800
+
+
+Started GET "/contractors/new" for 127.0.0.1 at 2014-12-05 13:37:00 -0800
+Processing by ContractorsController#new as HTML
+  Rendered contractors/_form.html.erb (42.1ms)
+  Rendered contractors/new.html.erb within layouts/application (44.3ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 183ms (Views: 181.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contractors/1/edit" for 127.0.0.1 at 2014-12-05 13:38:38 -0800
+Processing by ContractorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContractor Load (0.2ms)[0m  [1mSELECT  "contractors".* FROM "contractors"  WHERE "contractors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered contractors/_form.html.erb (2.8ms)
+  Rendered contractors/edit.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 12ms
+
+SyntaxError (/Users/preethichandrasekhar/BizDvs/app/views/contractors/_form.html.erb:1: syntax error, unexpected =>, expecting keyword_end
+...orm_for(@contractor) , :html => { :multipart => true } do |f...
+...                               ^
+/Users/preethichandrasekhar/BizDvs/app/views/contractors/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+...ml => { :multipart => true } do |f| @output_buffer.safe_appe...
+...                               ^
+/Users/preethichandrasekhar/BizDvs/app/views/contractors/_form.html.erb:84: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/contractors/_form.html.erb:1: syntax error, unexpected =>, expecting keyword_end
+  app/views/contractors/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+  app/views/contractors/_form.html.erb:84: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/contractors/edit.html.erb:8:in `_app_views_contractors_edit_html_erb___1109321515655362175_70187241168280'
+
+
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.6ms)
+
+
+Started GET "/contractors/1/edit" for 127.0.0.1 at 2014-12-05 13:39:30 -0800
+Processing by ContractorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContractor Load (0.1ms)[0m  SELECT  "contractors".* FROM "contractors"  WHERE "contractors"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contractors/_form.html.erb (1.5ms)
+  Rendered contractors/edit.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 6ms
+
+SyntaxError (/Users/preethichandrasekhar/BizDvs/app/views/contractors/_form.html.erb:1: syntax error, unexpected =>, expecting keyword_end
+...form_for(@contractor), :html => { :multipart => true } do |f...
+...                               ^
+/Users/preethichandrasekhar/BizDvs/app/views/contractors/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+...ml => { :multipart => true } do |f| @output_buffer.safe_appe...
+...                               ^
+/Users/preethichandrasekhar/BizDvs/app/views/contractors/_form.html.erb:84: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/contractors/_form.html.erb:1: syntax error, unexpected =>, expecting keyword_end
+  app/views/contractors/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+  app/views/contractors/_form.html.erb:84: syntax error, unexpected keyword_ensure, expecting end-of-input
+  app/views/contractors/edit.html.erb:8:in `_app_views_contractors_edit_html_erb___1109321515655362175_70187241168280'
+
+
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started GET "/contractors/1/edit" for 127.0.0.1 at 2014-12-05 13:41:31 -0800
+Processing by ContractorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContractor Load (0.1ms)[0m  [1mSELECT  "contractors".* FROM "contractors"  WHERE "contractors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered contractors/_form.html.erb (18.4ms)
+  Rendered contractors/edit.html.erb within layouts/application (19.6ms)
+Completed 500 Internal Server Error in 23ms
+
+ActionView::Template::Error (undefined local variable or method `form' for #<#<Class:0x007fab7b15a2b0>:0x007fab7ae96e98>):
+    72:   </div>
+    73:   <div class="form-group">
+    74:      <%= f.label :logo %><br>
+    75:   <%= form.file_field :logo %>
+    76:   </div>
+    77:   <div class="actions">
+    78:     <%= f.submit %>
+  app/views/contractors/_form.html.erb:75:in `block in _app_views_contractors__form_html_erb___1237504362812639160_70187234178320'
+  app/views/contractors/_form.html.erb:1:in `_app_views_contractors__form_html_erb___1237504362812639160_70187234178320'
+  app/views/contractors/edit.html.erb:8:in `_app_views_contractors_edit_html_erb___1109321515655362175_70187241168280'
+
+
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.4ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (16.0ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.2ms)
+
+
+Started GET "/contractors/1/edit" for 127.0.0.1 at 2014-12-05 13:41:50 -0800
+Processing by ContractorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContractor Load (0.1ms)[0m  SELECT  "contractors".* FROM "contractors"  WHERE "contractors"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contractors/_form.html.erb (11.5ms)
+  Rendered contractors/edit.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 142ms (Views: 140.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2014-12-05 13:41:51 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 13:41:51 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 13:41:51 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 13:41:51 -0800
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-12-05 13:41:51 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 13:41:51 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 13:41:51 -0800
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2014-12-05 13:41:51 -0800
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-05 13:41:51 -0800
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-05 13:41:51 -0800
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-05 13:41:51 -0800
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-05 13:41:51 -0800
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-05 13:41:51 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-05 13:41:51 -0800
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-05 13:41:51 -0800
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-05 13:41:51 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-05 13:41:51 -0800
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-05 13:41:51 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-05 13:41:51 -0800
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-05 13:41:51 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-12-05 13:41:51 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 13:41:51 -0800
+
+
+Started PATCH "/contractors/1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+Processing by ContractorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6bDUJrpNzhWLEIltS4Nwp1i8+2x/ShK957UMIp1KIII=", "contractor"=>{"name"=>"AA Pacific Builders", "phone"=>"555 555 5555", "email"=>"abcd@builders.co", "firstname"=>"Alfredo", "lastname"=>"Andrade", "address"=>"1056 Shafter Ave", "city"=>"San Francisco", "state"=>"CA", "zipcode"=>"94124", "licenseNo"=>"849479", "licenseClass"=>"B, C-5", "bondingcapacity"=>"500,000", "trade"=>"General Building", "comments"=>"Just Testing", "logo"=>#<ActionDispatch::Http::UploadedFile:0x007fab7f12b290 @tempfile=#<Tempfile:/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/RackMultipart20141205-6393-1we9jsw>, @original_filename="Green.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"contractor[logo]\"; filename=\"Green.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update Contractor", "id"=>"1"}
+  [1m[36mContractor Load (0.1ms)[0m  [1mSELECT  "contractors".* FROM "contractors"  WHERE "contractors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+Command :: file -b --mime '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6393-70kro0.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6393-j456jz.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6393-j456jz.png[0]'
+Command :: convert '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6393-j456jz.png[0]' -auto-orient -resize "300x300>" '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6393-j456jz20141205-6393-9t9k6'
+Command :: file -b --mime '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6393-j456jz20141205-6393-9t9k6'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6393-j456jz.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6393-j456jz.png[0]'
+Command :: convert '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6393-j456jz.png[0]' -auto-orient -resize "100x100>" '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6393-j456jz20141205-6393-1e2fwh9'
+Command :: file -b --mime '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6393-j456jz20141205-6393-1e2fwh9'
+Command :: file -b --mime '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6393-1r96nxv.png'
+Binary data inserted for `string` type on column `logo_content_type`
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "contractors" SET "logo_content_type" = ?, "logo_file_name" = ?, "logo_file_size" = ?, "logo_updated_at" = ?, "updated_at" = ? WHERE "contractors"."id" = 1[0m  [["logo_content_type", "image/png"], ["logo_file_name", "Green.png"], ["logo_file_size", 1749], ["logo_updated_at", "2014-12-05 21:42:03.141474"], ["updated_at", "2014-12-05 21:42:03.390152"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/contractors/1
+Completed 302 Found in 309ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/contractors/1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContractor Load (0.2ms)[0m  [1mSELECT  "contractors".* FROM "contractors"  WHERE "contractors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered contractors/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 138ms (Views: 136.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 13:42:03 -0800
+
+
+Started GET "/contractors/1" for 127.0.0.1 at 2014-12-05 13:43:44 -0800
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContractor Load (0.1ms)[0m  SELECT  "contractors".* FROM "contractors"  WHERE "contractors"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contractors/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `logo' for nil:NilClass):
+    4: <%= link_to 'Back', contractors_path , class:"btn btn-link"%>
+    5: <div class="row">
+    6:   <div class="col-md-6">
+    7:     <%= image_tag @contarct.logo.url(:medium) %>
+    8: <p>
+    9:   <strong>Name:</strong>
+   10:   <%= @contractor.name %>
+  app/views/contractors/show.html.erb:7:in `_app_views_contractors_show_html_erb___3389924567216472679_70187239805800'
+
+
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.0ms)
+
+
+Started GET "/contractors/1" for 127.0.0.1 at 2014-12-05 13:43:54 -0800
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContractor Load (0.1ms)[0m  [1mSELECT  "contractors".* FROM "contractors"  WHERE "contractors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered contractors/show.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 144ms (Views: 142.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2014-12-05 13:43:55 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 13:43:55 -0800
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-12-05 13:43:55 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 13:43:55 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 13:43:55 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 13:43:55 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 13:43:55 -0800
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2014-12-05 13:43:55 -0800
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-05 13:43:55 -0800
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-05 13:43:55 -0800
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-05 13:43:55 -0800
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-05 13:43:55 -0800
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-05 13:43:55 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-05 13:43:55 -0800
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-05 13:43:55 -0800
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-05 13:43:55 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-05 13:43:55 -0800
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-05 13:43:55 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-05 13:43:55 -0800
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-05 13:43:55 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-12-05 13:43:55 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 13:43:55 -0800
+
+
+Started GET "/contractors/1" for 127.0.0.1 at 2014-12-05 13:44:15 -0800
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContractor Load (0.2ms)[0m  SELECT  "contractors".* FROM "contractors"  WHERE "contractors"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contractors/show.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 142ms (Views: 139.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2014-12-05 13:44:15 -0800
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-12-05 13:44:15 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:15 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 13:44:15 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:15 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 13:44:16 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:16 -0800
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:16 -0800
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:16 -0800
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:16 -0800
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:16 -0800
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:16 -0800
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:16 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:16 -0800
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:16 -0800
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:16 -0800
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:16 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:16 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:16 -0800
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:16 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:16 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:16 -0800
+
+
+Started GET "/contractors/1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContractor Load (0.2ms)[0m  [1mSELECT  "contractors".* FROM "contractors"  WHERE "contractors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered contractors/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 132ms (Views: 129.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:24 -0800
+
+
+Started GET "/contractors/1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContractor Load (0.2ms)[0m  SELECT  "contractors".* FROM "contractors"  WHERE "contractors"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contractors/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 147ms (Views: 145.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:34 -0800
+
+
+Started GET "/contractors/1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContractor Load (0.3ms)[0m  [1mSELECT  "contractors".* FROM "contractors"  WHERE "contractors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered contractors/show.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 139ms (Views: 137.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:36 -0800
+
+
+Started GET "/contractors/1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContractor Load (0.2ms)[0m  SELECT  "contractors".* FROM "contractors"  WHERE "contractors"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contractors/show.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 138ms (Views: 136.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 13:44:44 -0800
+
+
+Started GET "/contractors/1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContractor Load (0.1ms)[0m  [1mSELECT  "contractors".* FROM "contractors"  WHERE "contractors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered contractors/show.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 140ms (Views: 137.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 13:45:30 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-05 13:46:08 -0800
+Processing by ContractorsController#index as HTML
+  [1m[35mContractor Load (0.2ms)[0m  SELECT "contractors".* FROM "contractors"
+  Rendered contractors/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `logo' for nil:NilClass):
+    26:   <tbody>
+    27:     <% @contractors.each do |contractor| %>
+    28:       <tr>
+    29:         <td> <%= image_tag @contractor.logo.url(:thumb) %> </td>
+    30:         <td><%= contractor.name %></td>
+    31:         <td><%= contractor.licenseNo %></td>
+    32:         <td><%= contractor.licenseClass %></td>
+  app/views/contractors/index.html.erb:29:in `block in _app_views_contractors_index_html_erb___1492279722809981533_70187274443900'
+  app/views/contractors/index.html.erb:27:in `_app_views_contractors_index_html_erb___1492279722809981533_70187274443900'
+
+
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-05 13:46:09 -0800
+Processing by ContractorsController#index as HTML
+  [1m[36mContractor Load (0.2ms)[0m  [1mSELECT "contractors".* FROM "contractors"[0m
+  Rendered contractors/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `logo' for nil:NilClass):
+    26:   <tbody>
+    27:     <% @contractors.each do |contractor| %>
+    28:       <tr>
+    29:         <td> <%= image_tag @contractor.logo.url(:thumb) %> </td>
+    30:         <td><%= contractor.name %></td>
+    31:         <td><%= contractor.licenseNo %></td>
+    32:         <td><%= contractor.licenseClass %></td>
+  app/views/contractors/index.html.erb:29:in `block in _app_views_contractors_index_html_erb___1492279722809981533_70187265793940'
+  app/views/contractors/index.html.erb:27:in `_app_views_contractors_index_html_erb___1492279722809981533_70187265793940'
+
+
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+Processing by ContractorsController#index as HTML
+  [1m[35mContractor Load (0.6ms)[0m  SELECT "contractors".* FROM "contractors"
+  Rendered contractors/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 132ms (Views: 130.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 13:46:47 -0800
+
+
+Started GET "/contractors/1" for 127.0.0.1 at 2014-12-05 13:46:50 -0800
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContractor Load (0.2ms)[0m  [1mSELECT  "contractors".* FROM "contractors"  WHERE "contractors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered contractors/show.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 139ms (Views: 137.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/contractors" for 127.0.0.1 at 2014-12-05 13:46:52 -0800
+Processing by ContractorsController#index as HTML
+  [1m[35mContractor Load (0.2ms)[0m  SELECT "contractors".* FROM "contractors"
+  Rendered contractors/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 130ms (Views: 129.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/contractors" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+Processing by ContractorsController#index as HTML
+  [1m[36mContractor Load (0.2ms)[0m  [1mSELECT "contractors".* FROM "contractors"[0m
+  Rendered contractors/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 140ms (Views: 138.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:22 -0800
+
+
+Started GET "/contractors" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+Processing by ContractorsController#index as HTML
+  [1m[35mContractor Load (0.2ms)[0m  SELECT "contractors".* FROM "contractors"
+  Rendered contractors/index.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 144ms (Views: 142.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 13:47:37 -0800
+
+
+Started GET "/contractors" for 127.0.0.1 at 2014-12-05 13:52:27 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ContractorsController#index as HTML
+  [1m[35mContractor Load (0.6ms)[0m  SELECT "contractors".* FROM "contractors"
+  Rendered contractors/index.html.erb within layouts/application (19.2ms)
+Completed 500 Internal Server Error in 44ms
+
+ActionView::Template::Error (No such file or directory @ rb_sysopen - /Users/preethichandrasekhar/BizDvs/config/dropbox.yml):
+    26:   <tbody>
+    27:     <% @contractors.each do |contractor| %>
+    28:       <tr>
+    29:         <td> <%= image_tag contractor.logo.url(:thumb) %> </td>
+    30:         <td><%= contractor.name %></td>
+    31:         <td><%= contractor.licenseNo %></td>
+    32:         <td><%= contractor.licenseClass %></td>
+  app/views/contractors/index.html.erb:29:in `block in _app_views_contractors_index_html_erb___399849158794426749_70301680682940'
+  app/views/contractors/index.html.erb:27:in `_app_views_contractors_index_html_erb___399849158794426749_70301680682940'
+
+
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.6ms)
+
+
+Started GET "/contractors" for 127.0.0.1 at 2014-12-05 14:00:52 -0800
+Processing by ContractorsController#index as HTML
+  [1m[36mContractor Load (1.4ms)[0m  [1mSELECT "contractors".* FROM "contractors"[0m
+  Rendered contractors/index.html.erb within layouts/application (295.1ms)
+Completed 500 Internal Server Error in 299ms
+
+ActionView::Template::Error (Path '/Green_thumb.png' not found):
+    26:   <tbody>
+    27:     <% @contractors.each do |contractor| %>
+    28:       <tr>
+    29:         <td> <%= image_tag contractor.logo.url(:thumb) %> </td>
+    30:         <td><%= contractor.name %></td>
+    31:         <td><%= contractor.licenseNo %></td>
+    32:         <td><%= contractor.licenseClass %></td>
+  app/views/contractors/index.html.erb:29:in `block in _app_views_contractors_index_html_erb___399849158794426749_70301680682940'
+  app/views/contractors/index.html.erb:27:in `_app_views_contractors_index_html_erb___399849158794426749_70301680682940'
+
+
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-05 14:01:07 -0800
+Processing by ContractorsController#index as HTML
+  [1m[35mContractor Load (0.3ms)[0m  SELECT "contractors".* FROM "contractors"
+  Rendered contractors/index.html.erb within layouts/application (224.4ms)
+Completed 500 Internal Server Error in 227ms
+
+ActionView::Template::Error (Path '/Green_thumb.png' not found):
+    26:   <tbody>
+    27:     <% @contractors.each do |contractor| %>
+    28:       <tr>
+    29:         <td> <%= image_tag contractor.logo.url(:thumb) %> </td>
+    30:         <td><%= contractor.name %></td>
+    31:         <td><%= contractor.licenseNo %></td>
+    32:         <td><%= contractor.licenseClass %></td>
+  app/views/contractors/index.html.erb:29:in `block in _app_views_contractors_index_html_erb___399849158794426749_70301680682940'
+  app/views/contractors/index.html.erb:27:in `_app_views_contractors_index_html_erb___399849158794426749_70301680682940'
+
+
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (55.8ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-05 14:02:32 -0800
+Processing by ContractorsController#index as HTML
+  [1m[36mContractor Load (0.3ms)[0m  [1mSELECT "contractors".* FROM "contractors"[0m
+  Rendered contractors/index.html.erb within layouts/application (353.1ms)
+Completed 500 Internal Server Error in 357ms
+
+ActionView::Template::Error (Path '/Green_thumb.png' not found):
+    26:   <tbody>
+    27:     <% @contractors.each do |contractor| %>
+    28:       <tr>
+    29:        <!-- <td> <%= image_tag contractor.logo.url(:thumb) %> </td> -->
+    30:         <td><%= contractor.name %></td>
+    31:         <td><%= contractor.licenseNo %></td>
+    32:         <td><%= contractor.licenseClass %></td>
+  app/views/contractors/index.html.erb:29:in `block in _app_views_contractors_index_html_erb___399849158794426749_70301701510440'
+  app/views/contractors/index.html.erb:27:in `_app_views_contractors_index_html_erb___399849158794426749_70301701510440'
+
+
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-05 14:02:41 -0800
+Processing by ContractorsController#index as HTML
+  [1m[35mContractor Load (0.5ms)[0m  SELECT "contractors".* FROM "contractors"
+  Rendered contractors/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 326ms (Views: 325.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 14:02:42 -0800
+
+
+Started GET "/contractors/1/edit" for 127.0.0.1 at 2014-12-05 14:02:46 -0800
+Processing by ContractorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContractor Load (0.3ms)[0m  [1mSELECT  "contractors".* FROM "contractors"  WHERE "contractors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered contractors/_form.html.erb (46.8ms)
+  Rendered contractors/edit.html.erb within layouts/application (49.8ms)
+  Rendered layouts/_header.html.erb (0.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 193ms (Views: 189.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/contractors/1" for 127.0.0.1 at 2014-12-05 14:03:01 -0800
+Processing by ContractorsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6bDUJrpNzhWLEIltS4Nwp1i8+2x/ShK957UMIp1KIII=", "contractor"=>{"name"=>"AA Pacific Builders", "phone"=>"555 555 5555", "email"=>"abcd@builders.co", "firstname"=>"Alfredo", "lastname"=>"Andrade", "address"=>"1056 Shafter Ave", "city"=>"San Francisco", "state"=>"CA", "zipcode"=>"94124", "licenseNo"=>"849479", "licenseClass"=>"B, C-5", "bondingcapacity"=>"500,000", "trade"=>"General Building", "comments"=>"Just Testing", "logo"=>#<ActionDispatch::Http::UploadedFile:0x007fe0c5457308 @tempfile=#<Tempfile:/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/RackMultipart20141205-6456-gzxvhp>, @original_filename="Green.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"contractor[logo]\"; filename=\"Green.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update Contractor", "id"=>"1"}
+  [1m[35mContractor Load (0.1ms)[0m  SELECT  "contractors".* FROM "contractors"  WHERE "contractors"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Command :: file -b --mime '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6456-1fgsjoc.png'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6456-16o814c.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6456-16o814c.png[0]'
+Command :: convert '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6456-16o814c.png[0]' -auto-orient -resize "300x300>" '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6456-16o814c20141205-6456-1flm1pp'
+Command :: file -b --mime '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6456-16o814c20141205-6456-1flm1pp'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6456-16o814c.png[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6456-16o814c.png[0]'
+Command :: convert '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6456-16o814c.png[0]' -auto-orient -resize "100x100>" '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6456-16o814c20141205-6456-k31hmx'
+Command :: file -b --mime '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6456-16o814c20141205-6456-k31hmx'
+Command :: file -b --mime '/var/folders/8b/dsx34w6j78b6b816_t6187jw0000gn/T/d382816a3cbeed082c9e216e7392eed120141205-6456-8z04q1.png'
+  [1m[35mSQL (1.0ms)[0m  UPDATE "contractors" SET "logo_file_name" = ?, "logo_updated_at" = ?, "updated_at" = ? WHERE "contractors"."id" = 1  [["logo_file_name", "Green.png"], ["logo_updated_at", "2014-12-05 22:03:02.569346"], ["updated_at", "2014-12-05 22:03:02.778383"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/contractors/1
+Completed 302 Found in 5108ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/contractors/1" for 127.0.0.1 at 2014-12-05 14:03:06 -0800
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContractor Load (0.1ms)[0m  SELECT  "contractors".* FROM "contractors"  WHERE "contractors"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered contractors/show.html.erb within layouts/application (391.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 543ms (Views: 541.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2014-12-05 14:03:07 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-05 14:03:07 -0800
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-12-05 14:03:07 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-05 14:03:07 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-05 14:03:07 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-05 14:03:07 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-05 14:03:07 -0800
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2014-12-05 14:03:07 -0800
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-05 14:03:07 -0800
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-05 14:03:07 -0800
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-05 14:03:07 -0800
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-05 14:03:07 -0800
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-05 14:03:07 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-05 14:03:07 -0800
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-05 14:03:07 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-05 14:03:07 -0800
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-05 14:03:07 -0800
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-05 14:03:07 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-05 14:03:07 -0800
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-05 14:03:07 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-12-05 14:03:07 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-05 14:03:07 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-05 14:03:21 -0800
+Processing by ContractorsController#index as HTML
+  [1m[36mContractor Load (0.2ms)[0m  [1mSELECT "contractors".* FROM "contractors"[0m
+  Rendered contractors/index.html.erb within layouts/application (371.0ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 502ms (Views: 501.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/contractors" for 127.0.0.1 at 2014-12-05 14:03:23 -0800
+Processing by ContractorsController#index as HTML
+  [1m[35mContractor Load (0.4ms)[0m  SELECT "contractors".* FROM "contractors"
+  Rendered contractors/index.html.erb within layouts/application (343.9ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 474ms (Views: 473.1ms | ActiveRecord: 0.4ms)

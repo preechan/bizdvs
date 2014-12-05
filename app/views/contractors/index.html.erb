@@ -4,6 +4,7 @@
 <table class="table table-striped">
   <thead>
     <tr>
+      <th>  </th>
       <th>Name</th>
       <th>License No</th>
       <th>License Class</th>
@@ -25,6 +26,7 @@
   <tbody>
     <% @contractors.each do |contractor| %>
       <tr>
+       <td> <%= image_tag contractor.logo.url(:thumb) %> </td> 
         <td><%= contractor.name %></td>
         <td><%= contractor.licenseNo %></td>
         <td><%= contractor.licenseClass %></td>
