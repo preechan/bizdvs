@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141205212358) do
+ActiveRecord::Schema.define(version: 20141208203717) do
+
+  create_table "certification_categories", force: true do |t|
+    t.string   "certificationCategory"
+    t.string   "microDiscount"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "contractor_id"
+  end
 
   create_table "contractors", force: true do |t|
     t.string   "name"
@@ -34,6 +42,12 @@ ActiveRecord::Schema.define(version: 20141205212358) do
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
+    t.integer  "fax"
+    t.string   "certificationType"
+    t.string   "ownershipType"
+    t.integer  "sfCertificationNumber"
+    t.integer  "sfVendorNumber"
+    t.integer  "firmSize"
   end
 
   create_table "users", force: true do |t|

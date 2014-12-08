@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Edit', edit_certification_category_path(@certification_category),class:"btn btn-default" %> |
+<%= link_to 'Back To Contractor', contractor_path(@certification_category.contractor_id),class:"btn btn-default" %>
+</br>
+</br>
+
+<p>
+  <strong>Certification Category:</strong>
+  <%= @certification_category.certificationCategory %>
+</p>
+
+<p>
+  <strong>Micro Discount:</strong>
+  <%= @certification_category.microDiscount %>
+</p>
+
+ 

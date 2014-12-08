@@ -1,0 +1,27 @@
+<h1>Listing certification_categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Certificationcategory</th>
+      <th>Microdiscount</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @certification_categories.each do |certification_category| %>
+      <tr>
+        <td><%= certification_category.certificationCategory %></td>
+        <td><%= certification_category.microDiscount %></td>
+        <td><%= link_to 'Show', certification_category %></td>
+        <td><%= link_to 'Edit', edit_certification_category_path(certification_category) %></td>
+        <td><%= link_to 'Destroy', certification_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Certification category', new_certification_category_path %>

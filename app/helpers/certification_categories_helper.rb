@@ -1,0 +1,2 @@
+module CertificationCategoriesHelper
+end

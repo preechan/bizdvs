@@ -1,0 +1,26 @@
+<%= form_for(@certification_category) do |f| %>
+  <% if @certification_category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@certification_category.errors.count, "error") %> prohibited this certification_category from being saved:</h2>
+
+      <ul>
+      <% @certification_category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :certificationCategory, "Certification Category" %><br>
+    <%= f.text_field :certificationCategory %>
+  </div>
+  <div class="field">
+    <%= f.label :microDiscount, "Micro Discount" %><br>
+    <%= f.text_field :microDiscount %>
+  </div>
+      <%= hidden_field_tag :contractor_id, params[:contractor_id] %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

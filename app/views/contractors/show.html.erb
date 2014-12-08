@@ -1,23 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_contractor_path(@contractor), class:"btn btn-link" %> |
-<%= link_to 'Back', contractors_path , class:"btn btn-link"%>
+<%= link_to 'Edit', edit_contractor_path(@contractor), class:"btn btn-default" %> |
+<%= link_to 'Back', contractors_path , class:"btn btn-default"%>
 </br>
 
   </br>
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-3">
         <%= image_tag @contractor.logo.url(:medium) %>
   </div>
-  <div class="col-md-4">
-<p>
-  <strong>Name:</strong>
+  <div class="col-md-3">
+<h3>
   <%= @contractor.name %>
-</p>
-
+</h3>
+</br>
+  <%= @contractor.firstname %>
+   <%= @contractor.lastname %>
+</br>
+  <%= @contractor.address %>
+  </br>
+   <%= @contractor.city %>
+   </br>
+    <%= @contractor.state %>
+      <%= @contractor.zipcode %>
 <p>
+   </br>
   <strong>Phone:</strong>
   <%= @contractor.phone %>
+</p>
+<p>
+  <strong>Fax:</strong>
+  <%= @contractor.fax %>
 </p>
 
 <p>
@@ -26,36 +39,13 @@
 </p>
 
 <p>
-  <strong>First Name:</strong>
-  <%= @contractor.firstname %>
+  <strong>Comments:</strong>
+  <%= @contractor.comments %>
 </p>
 
-<p>
-  <strong>Last Name:</strong>
-  <%= @contractor.lastname %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @contractor.address %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @contractor.city %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @contractor.state %>
-</p>
-
-<p>
-  <strong>Zipcode:</strong>
-  <%= @contractor.zipcode %>
-</p>
 </div>
-<div class="col-md-4">
+
+<div class="col-md-6">
 
 <p>
   <strong>License No:</strong>
@@ -78,9 +68,52 @@
 </p>
 
 <p>
-  <strong>Comments:</strong>
-  <%= @contractor.comments %>
+  <strong>Certification Type:</strong>
+  <%= @contractor.certificationType %>
 </p>
+
+<p>
+  <strong>Ownership Type:</strong>
+  <%= @contractor.ownershipType %>
+</p>
+
+<p>
+  <strong>SF Certification Number:</strong>
+  <%= @contractor.sfCertificationNumber %>
+</p>
+
+<p>
+  <strong>SF Vendor Number:</strong>
+  <%= @contractor.sfVendorNumber %>
+</p>
+
+<p>
+  <strong>Firm Size:</strong>
+  <%= @contractor.firmSize %>
+</p>
+
+</div>
+<div class="col-md-12">
+  <h4> Certification Categories </h4>
+  <%= link_to 'Add Certification Category',  new_certification_category_path(:contractor_id => @contractor.id ) ,class:"btn btn-default"%>
+<table class="table table-striped">
+      <thead>
+      <tr>
+        <th colspan="4"><strong>Certification Category</strong></th>
+        <th colspan="4"><strong>Micro Discount</strong></th>
+        <th colspan="4"></th>
+      </tr>
+      </thead>
+      <tbody>
+  <% @contractor.certificationCategories.each do |certification| %>
+  <tr>
+    <td colspan="4"><%= certification.certificationCategory %></td>
+    <td colspan="4"><%= certification.microDiscount %></td>
+     <td colspan="4"><%= link_to 'Edit', edit_certification_category_path(certification) %></td>
+  </tr>
+  <% end %>
+      </tbody>
+</table>
 </div>
 </div>
 

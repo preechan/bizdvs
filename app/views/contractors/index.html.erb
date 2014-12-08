@@ -6,17 +6,11 @@
     <tr>
       <th>  </th>
       <th>Name</th>
+      <th colspan="4">Contact Details</th>
       <th>License No</th>
       <th>License Class</th>
       <th>Bonding Capacity</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Address</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Zipcode</th>
-      <th>Phone</th>
-      <th>Email</th>
+
       <th>Trade</th>
       <th>Comments</th>
       <th colspan="3"></th>
@@ -28,17 +22,14 @@
       <tr>
        <td> <%= image_tag contractor.logo.url(:thumb) %> </td> 
         <td><%= contractor.name %></td>
+        <td colspan="4"><%= contractor.firstname %> <%= contractor.lastname %> </br> <%= contractor.address %> </br><%= contractor.city %> </br><%= contractor.state %> <%= contractor.zipcode %>
+          <br> Ph: <%= contractor.phone %>
+          <br> Fax:<%= contractor.fax %>
+           <br> <%= contractor.email %>
+        </td>
         <td><%= contractor.licenseNo %></td>
         <td><%= contractor.licenseClass %></td>
         <td><%= contractor.bondingcapacity %></td>
-        <td><%= contractor.firstname %></td>
-        <td><%= contractor.lastname %></td>
-        <td><%= contractor.address %></td>
-        <td><%= contractor.city %></td>
-        <td><%= contractor.state %></td>
-        <td><%= contractor.zipcode %></td>
-        <td><%= contractor.phone %></td>
-        <td><%= contractor.email %></td>
         <td><%= contractor.trade %></td>
         <td><%= contractor.comments %></td>
         <td>

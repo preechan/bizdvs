@@ -11,7 +11,11 @@
     </div>
   <% end %>
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-4">
+  <div class="form-group">
+     <%= f.label :logo %><br>
+  <%= f.file_field :logo %>
+  </div>
   <div class="form-group">
     <%= f.label :name %><br>
     <%= f.text_field :name ,class:"form-control"%>
@@ -19,6 +23,10 @@
     <div class="form-group">
     <%= f.label :phone %><br>
     <%= f.text_field :phone,class:"form-control" %>
+  </div>
+    <div class="form-group">
+    <%= f.label :fax %><br>
+    <%= f.text_field :fax,class:"form-control" %>
   </div>
   <div class="form-group">
     <%= f.label :email %><br>
@@ -49,30 +57,49 @@
     <%= f.text_field :zipcode,class:"form-control" %>
   </div>
 </div>
-<div class="col-md-6">
+<div class="col-md-4">
   <div class="form-group">
-    <%= f.label "License No" %><br>
+    <%= f.label :licenseNo, "License No" %><br>
     <%= f.text_field :licenseNo ,class:"form-control"%>
   </div>
   <div class="form-group">
-    <%= f.label "License Class" %><br>
+    <%= f.label :licenseClass ,"License Class" %><br>
     <%= f.text_field :licenseClass,class:"form-control" %>
   </div>
   <div class="form-group">
-    <%= f.label "Bonding Capacity" %><br>
+    <%= f.label :bondingcapacity,"Bonding Capacity" %><br>
     <%= f.text_field :bondingcapacity,class:"form-control" %>
   </div>
   <div class="form-group">
     <%= f.label :trade %><br>
     <%= f.text_field :trade ,class:"form-control" %>
   </div>
-  <div class="form-group">
+    <div class="form-group">
+    <%= f.label :certificationType,"Certification Type" %><br>
+    <%= f.text_field :certificationType ,class:"form-control" %>
+  </div>
+     <div class="form-group">
+    <%= f.label :ownershipType,"Ownership Type" %><br>
+    <%= f.text_field :ownershipType ,class:"form-control" %>
+  </div>
+     <div class="form-group">
+    <%= f.label :sfCertificationNumber,"SF Certification Number" %><br>
+    <%= f.text_field :sfCertificationNumber,class:"form-control" %>
+  </div>
+    <div class="form-group">
+    <%= f.label :sfVendorNumber,"SF Vendor Number" %><br>
+    <%= f.text_field :sfVendorNumber ,class:"form-control" %>
+  </div>
+    <div class="form-group">
+    <%= f.label :firmSize, "Firm Size" %><br>
+    <%= f.text_field :firmSize ,class:"form-control" %>
+  </div>
+  
+  </div>
+  <div class="col-md-4">
+    <div class="form-group">
     <%= f.label :comments %><br>
     <%= f.text_area :comments,class:"form-control" %>
-  </div>
-  <div class="form-group">
-     <%= f.label :logo %><br>
-  <%= f.file_field :logo %>
   </div>
   <div class="actions">
     <%= f.submit %>

@@ -8,4 +8,6 @@ class Contractor < ActiveRecord::Base
     :path => ":style/:id/:filename"
 	end
   validates_attachment_content_type :logo, :content_type => /\Aimage\/.*\Z/
+
+has_many :certificationCategories , dependent: :destroy
 end

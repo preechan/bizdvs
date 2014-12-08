@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :certification_categories
+
   devise_for :users
   resources :contractors
 

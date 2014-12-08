@@ -1,9 +1,11 @@
-<h1>Editing contractor</h1>
+<h3>Editing Contractor</h3>
 
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<%= link_to 'Show', @contractor ,class:"btn btn-default"%> |
+<%= link_to 'Back', contractors_path,class:"btn btn-default" %> 
 
-<%= link_to 'Show', @contractor %> |
-<%= link_to 'Back', contractors_path %>
-
-
+</br>
+</br>
 <%= render 'form' %>
 
