@@ -14968,3 +14968,156 @@ Processing by ContractorsController#show as HTML
   Rendered layouts/_header.html.erb (0.0ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 143ms (Views: 141.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-08 13:53:35 -0800
+Processing by ContractorsController#index as HTML
+  [1m[35mContractor Load (0.2ms)[0m  SELECT "contractors".* FROM "contractors"
+  Rendered contractors/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 179ms (Views: 177.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/contractors/1" for 127.0.0.1 at 2014-12-08 13:54:24 -0800
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mContractor Load (0.2ms)[0m  [1mSELECT  "contractors".* FROM "contractors"  WHERE "contractors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCertificationCategory Load (0.1ms)[0m  SELECT "certification_categories".* FROM "certification_categories"  WHERE "certification_categories"."contractor_id" = ?  [["contractor_id", 1]]
+  Rendered contractors/show.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 151ms (Views: 149.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/contractors" for 127.0.0.1 at 2014-12-08 13:54:30 -0800
+Processing by ContractorsController#index as HTML
+  [1m[36mContractor Load (0.3ms)[0m  [1mSELECT "contractors".* FROM "contractors"[0m
+  Rendered contractors/index.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 146ms (Views: 144.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/contractors" for 127.0.0.1 at 2014-12-08 14:22:06 -0800
+Processing by ContractorsController#index as HTML
+  [1m[35mContractor Load (1.3ms)[0m  SELECT "contractors".* FROM "contractors"
+  Rendered contractors/index.html.erb within layouts/application (27.9ms)
+Completed 500 Internal Server Error in 49ms
+
+ActionView::Template::Error (undefined method `sfCertificationNumber' for nil:NilClass):
+    37:         <td><%= contractor.trade %></td>
+    38:         <td><%= contractor.certificationType %></td>
+    39:         <td><%= contractor.ownershipType %></td>
+    40:         <td><%= @contractor.sfCertificationNumber %></td>
+    41:         <td><%= @contractor.sfVendorNumber %></td>
+    42:          <td><%= @contractor.firmSize %></td>
+    43:         <td><%= contractor.comments %></td>
+  app/views/contractors/index.html.erb:40:in `block in _app_views_contractors_index_html_erb__4166829231032992511_70213209310100'
+  app/views/contractors/index.html.erb:25:in `_app_views_contractors_index_html_erb__4166829231032992511_70213209310100'
+
+
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/preethichandrasekhar/.rvm/gems/ruby-2.1.5/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.9ms)
+
+
+Started GET "/contractors" for 127.0.0.1 at 2014-12-08 14:22:38 -0800
+Processing by ContractorsController#index as HTML
+  [1m[36mContractor Load (0.6ms)[0m  [1mSELECT "contractors".* FROM "contractors"[0m
+  Rendered contractors/index.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 168ms (Views: 166.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/certification_categories.css?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/certification_categories.js?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-08 14:22:39 -0800
+
+
+Started GET "/contractors/1" for 127.0.0.1 at 2014-12-08 14:23:11 -0800
+Processing by ContractorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mContractor Load (0.5ms)[0m  SELECT  "contractors".* FROM "contractors"  WHERE "contractors"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCertificationCategory Load (0.1ms)[0m  [1mSELECT "certification_categories".* FROM "certification_categories"  WHERE "certification_categories"."contractor_id" = ?[0m  [["contractor_id", 1]]
+  Rendered contractors/show.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 151ms (Views: 148.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/contractors" for 127.0.0.1 at 2014-12-08 14:23:20 -0800
+Processing by ContractorsController#index as HTML
+  [1m[35mContractor Load (0.2ms)[0m  SELECT "contractors".* FROM "contractors"
+  Rendered contractors/index.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 152ms (Views: 150.4ms | ActiveRecord: 0.2ms)

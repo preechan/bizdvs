@@ -10,8 +10,12 @@
       <th>License No</th>
       <th>License Class</th>
       <th>Bonding Capacity</th>
-
       <th>Trade</th>
+      <th>Certification Type</th>
+      <th>Ownership Type</th>
+      <th>SF Certification Number</th>
+      <th>SF Vendor Number</th>
+      <th>Firm Size</th>
       <th>Comments</th>
       <th colspan="3"></th>
     </tr>
@@ -31,6 +35,11 @@
         <td><%= contractor.licenseClass %></td>
         <td><%= contractor.bondingcapacity %></td>
         <td><%= contractor.trade %></td>
+        <td><%= contractor.certificationType %></td>
+        <td><%= contractor.ownershipType %></td>
+        <td><%= contractor.sfCertificationNumber %></td>
+        <td><%= contractor.sfVendorNumber %></td>
+         <td><%=contractor.firmSize %></td>
         <td><%= contractor.comments %></td>
         <td>
           <div class="dropdown">
