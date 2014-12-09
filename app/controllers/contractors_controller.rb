@@ -7,6 +7,11 @@ class ContractorsController < ApplicationController
     @contractors = Contractor.all
   end
 
+   def import
+    Contractor.import(params[:file])
+    redirect_to root_url, notice: "Contractors imported."
+  end
+
   # GET /contractors/1
   # GET /contractors/1.json
   def show

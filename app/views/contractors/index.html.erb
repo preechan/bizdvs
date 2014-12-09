@@ -1,6 +1,15 @@
 
-<%= link_to 'New Contractor', new_contractor_path ,class:"btn btn-default"%>
-
+<div class="row">
+  <div class="col-md-10">
+    <%= link_to 'New Contractor', new_contractor_path ,class:"btn btn-default"%>
+  </div>
+  <div class="col-md-2">
+      <%= form_tag import_contractors_path, multipart: true do %>
+        <%= file_field_tag :file %>
+        <%= submit_tag "Import CSV" %>
+      <% end %>
+  </div>
+</div>
 <table class="table table-striped">
   <thead>
     <tr>

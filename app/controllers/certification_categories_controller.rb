@@ -7,6 +7,12 @@ class CertificationCategoriesController < ApplicationController
     @certification_categories = CertificationCategory.where(contractor_id: params[:contractor_id]).order("created_at DESC")
   end
 
+
+   def import
+    CertificationCategory.import(params[:file])
+    redirect_to root_url, notice: "Certification Categories imported."
+  end
+
   def index
     @certification_categories = CertificationCategory.all
     respond_with(@certification_categories)

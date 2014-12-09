@@ -1,8 +1,17 @@
 Rails.application.routes.draw do
+
   resources :certification_categories
 
   devise_for :users
   resources :contractors
+
+  resources :contractors do
+    collection { post :import }
+  end
+
+  resources :certification_categories do
+    collection { post :import }
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
