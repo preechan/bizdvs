@@ -4,7 +4,7 @@ class ContractorsController < ApplicationController
   # GET /contractors
   # GET /contractors.json
   def index
-    @contractors = Contractor.all
+    @contractors = Contractor.order('contractors.id ASC').all
   end
 
    def import

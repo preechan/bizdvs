@@ -38529,3 +38529,171 @@ Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-12-10 
 
 
 Started GET "/assets/profile26.png" for 127.0.0.1 at 2014-12-10 12:38:42 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-10 12:42:08 -0800
+Processing by ContractorsController#index as HTML
+  [1m[35mContractor Load (11.1ms)[0m  SELECT "contractors".* FROM "contractors"   ORDER BY contractors.id DESC
+  Rendered contractors/index.html.erb within layouts/application (506.9ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 672ms (Views: 654.1ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/certification_categories.css?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/certification_categories.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/assets/profile26.png" for 127.0.0.1 at 2014-12-10 12:42:09 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-10 12:42:39 -0800
+Processing by ContractorsController#index as HTML
+  [1m[36mContractor Load (7.2ms)[0m  [1mSELECT "contractors".* FROM "contractors"   ORDER BY contractors.id ASC[0m
+  Rendered contractors/index.html.erb within layouts/application (491.2ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 646ms (Views: 633.3ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/assets/certification_categories.css?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/contractors.css?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/contractors.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/certification_categories.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
+
+
+Started GET "/assets/profile26.png" for 127.0.0.1 at 2014-12-10 12:42:40 -0800
