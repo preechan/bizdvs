@@ -30,6 +30,7 @@ class CertificationCategoriesController < ApplicationController
   def edit
   end
 
+
   def create
     @certification_category = CertificationCategory.new(certification_category_params)
     @certification_category.contractor_id = params[:contractor_id]
