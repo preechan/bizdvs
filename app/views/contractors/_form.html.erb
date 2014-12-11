@@ -70,10 +70,15 @@
     <%= f.label :bondingcapacity,"Bonding Capacity" %><br>
     <%= f.text_field :bondingcapacity,class:"form-control" %>
   </div>
-  <div class="form-group">
-    <%= f.label :trade %><br>
-    <%= f.text_field :trade ,class:"form-control" %>
-  </div>
+
+  <div class="checkbox">
+    <strong> Trade </strong>
+  <ul style="list-style-type:none;">
+     <% @trades.each  do |trade| %>
+        <li> <%= check_box_tag  "trade_id[]",trade.id,(checked = true if @selectedtrades.collect{|t| t.id}.include?(trade.id)) %> <%= trade.name %> </li>
+    <%end%>
+  </ul>
+</div>
     <div class="form-group">
     <%= f.label :certificationType,"Certification Type" %><br>
     <%= f.text_field :certificationType ,class:"form-control" %>

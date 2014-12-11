@@ -64,7 +64,10 @@
 
 <p>
   <strong>Trade:</strong>
-  <%= @contractor.trade %>
+</br>
+  <% @trades.each do |name| %>
+  <%= name.name %> </br>
+  <% end %>
 </p>
 
 <p>

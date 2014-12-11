@@ -4,7 +4,7 @@ class ContractorsController < ApplicationController
   # GET /contractors
   # GET /contractors.json
   def index
-    @contractors = Contractor.order('contractors.id ASC').all
+    @contractors = Contractor.order('contractors.name ASC').all
   end
 
    def import
@@ -15,22 +15,38 @@ class ContractorsController < ApplicationController
   # GET /contractors/1
   # GET /contractors/1.json
   def show
+        @contractor_trades = ContractorsTrades.where('contractor_id' => params[:id])
+        @trades = Array.new
+        @contractor_trades.each do |ct|
+          #@trade = Trade.find(ct["trade_id"])
+          @trades  << Trade.find(ct["trade_id"])
+        end
   end
 
   # GET /contractors/new
   def new
     @contractor = Contractor.new
+   
   end
 
   # GET /contractors/1/edit
   def edit
+     @trades = Trade.all
+      @contractor_trades = ContractorsTrades.where('contractor_id' => params[:id])
+        @selectedtrades = Array.new
+        @contractor_trades.each do |ct|
+          #@trade = Trade.find(ct["trade_id"])
+          @selectedtrades  << Trade.find(ct["trade_id"])
+        end
   end
 
   # POST /contractors
   # POST /contractors.json
   def create
     @contractor = Contractor.new(contractor_params)
-
+    @trades = Trade.where(:id => params[:trade_id])
+    @contractor.trades << @trades 
+#associate the selected trades to the contractors and create records in the join table
     respond_to do |format|
       if @contractor.save
         format.html { redirect_to @contractor, notice: 'Contractor was successfully created.' }
@@ -46,7 +62,12 @@ class ContractorsController < ApplicationController
   # PATCH/PUT /contractors/1.json
   def update
     respond_to do |format|
-      if @contractor.update(contractor_params)
+      if @contractor.update(contractor_params)    
+      @contractor = Contractor.find(params[:id])
+      @trades = Trade.where(:id => params[:trade_id])
+      @contractor.trades.destroy_all   #disassociate the already added organizers
+      @contractor.trades << @trades 
+      #associate the selected organizers to the event and create records in the join table
         format.html { redirect_to @contractor, notice: 'Contractor was successfully updated.' }
         format.json { render :show, status: :ok, location: @contractor }
       else
@@ -74,6 +95,6 @@ class ContractorsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def contractor_params
-      params.require(:contractor).permit(:name, :licenseNo, :licenseClass, :bondingcapacity, :firstname, :lastname, :address, :city, :state, :zipcode, :phone, :email, :trade, :comments, :logo)
+      params.require(:contractor).permit(:name, :licenseNo, :licenseClass, :bondingcapacity, :firstname, :lastname, :address, :city, :state, :zipcode, :phone, :email, :trade, :comments, :logo, :fax, :certificationType, :ownershipType, :sfCertificationNumber, :sfVendorNumber, :firmSize)
     end
 end

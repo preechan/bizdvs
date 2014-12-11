@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :trade_contractor_maps
+
+  resources :trades
+
   resources :certification_categories
 
   devise_for :users
