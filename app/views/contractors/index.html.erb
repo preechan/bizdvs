@@ -40,9 +40,11 @@
         <td><%= contractor.licenseClass %></td>
         <td><%= contractor.bondingcapacity %></td>
         <td>
-  <% @trades.each do |name| %>
-  <%= name.name %>,
-  <% end %></td>
+        <% contractor.trades.each do 
+        |trade| %>
+        <%= trade.name %><%= "," unless trade == contractor.trades.last %>
+        <% end %>
+      </td>
         <td><%= contractor.certificationType %></td>
         <td><%= contractor.ownershipType %></td>
         <td><%= contractor.sfCertificationNumber %></td>

@@ -1,8 +1,7 @@
 class ContractorsController < ApplicationController
   before_action :set_contractor, only: [:show, :edit, :update, :destroy]
 
-def importC
-end
+
   # GET /contractors
   # GET /contractors.json
   def index
