@@ -10,12 +10,15 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+<div class="row">
+   <div class="col-md-8">
+  <div class="form-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name,class:"form-control" %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+</div>
+</div>
 <% end %>
