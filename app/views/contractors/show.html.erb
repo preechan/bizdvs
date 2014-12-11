@@ -100,11 +100,6 @@
   <h4> Certification Categories </h4>
   <%= link_to 'Add Certification Category',  new_certification_category_path(:contractor_id => @contractor.id ) ,class:"btn btn-default"%>
 
-  <h3>Import a CSV File</h3>
-  <%= form_tag import_certification_categories_path, multipart: true do %>
-    <%= file_field_tag :file %>
-    <%= submit_tag "Import CSV" %>
-  <% end %>
 <table class="table table-striped">
       <thead>
       <tr>

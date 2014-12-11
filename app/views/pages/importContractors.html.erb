@@ -1,0 +1,9 @@
+ <div class="row">
+ 	<h3> Import a Contractors CSV File</h3>
+ <div class="col-md-12">
+      <%= form_tag import_contractors_path, multipart: true do %>
+        <%= file_field_tag :file %>
+        <%= submit_tag "Import CSV" %>
+      <% end %>
+  </div>
+</div>

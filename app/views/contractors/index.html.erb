@@ -3,15 +3,6 @@
   <div class="col-md-8">
     <%= link_to 'New Contractor', new_contractor_path ,class:"btn btn-default"%>
   </div>
-  <div class="col-md-2">
-    <%= link_to 'New Trade', new_trade_path,class:"btn btn-default" %>
-  </div>
-   <div class="col-md-2">
-      <%= form_tag import_contractors_path, multipart: true do %>
-        <%= file_field_tag :file %>
-        <%= submit_tag "Import CSV" %>
-      <% end %>
-  </div>
 </div>
 <table class="table table-striped">
   <thead>
@@ -39,7 +30,7 @@
       <tr>
        <td> <%= image_tag contractor.logo.url(:thumb) %> </td> 
        <td><%= contractor.id %></td>
-        <td><%= contractor.name %></td>
+        <td><%= link_to contractor.name, contractor %> </td>
         <td colspan="4"><%= contractor.firstname %> <%= contractor.lastname %> </br> <%= contractor.address %> </br><%= contractor.city %> </br><%= contractor.state %> <%= contractor.zipcode %>
           <br> Ph: <%= contractor.phone %>
           <br> Fax:<%= contractor.fax %>
@@ -48,7 +39,10 @@
         <td><%= contractor.licenseNo %></td>
         <td><%= contractor.licenseClass %></td>
         <td><%= contractor.bondingcapacity %></td>
-        <td><%= contractor.trades.name %></td>
+        <td>
+  <% @trades.each do |name| %>
+  <%= name.name %>,
+  <% end %></td>
         <td><%= contractor.certificationType %></td>
         <td><%= contractor.ownershipType %></td>
         <td><%= contractor.sfCertificationNumber %></td>

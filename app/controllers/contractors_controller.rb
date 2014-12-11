@@ -1,10 +1,20 @@
 class ContractorsController < ApplicationController
   before_action :set_contractor, only: [:show, :edit, :update, :destroy]
 
+def importC
+end
   # GET /contractors
   # GET /contractors.json
   def index
     @contractors = Contractor.order('contractors.name ASC').all
+    @contractors.each do |contractor|
+    @contractor_trades = ContractorsTrades.where('contractor_id' => contractor[:id])
+        @trades = Array.new
+        @contractor_trades.each do |ct|
+          #@trade = Trade.find(ct["trade_id"])
+          @trades  << Trade.find(ct["trade_id"])
+        end
+    end
   end
 
    def import
