@@ -5,7 +5,7 @@ class ContractorsController < ApplicationController
   # GET /contractors
   # GET /contractors.json
   def index
-    @contractors = Contractor.order('contractors.name ASC').all
+    @contractors = Contractor.order('contractors.name ASC').where("city like 'SF' OR city like 'San Francisco'" )
     @contractors.each do |contractor|
     @contractor_trades = ContractorsTrades.where('contractor_id' => contractor[:id])
         @trades = Array.new
