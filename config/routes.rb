@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   root 'contractors#index'
   get 'pages/importContractors'
    get 'pages/importCertificationCategories'
+   get 'tradeFilter' => 'contractors#tradeFilter'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

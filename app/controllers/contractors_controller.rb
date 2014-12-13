@@ -2,6 +2,18 @@ class ContractorsController < ApplicationController
   before_action :set_contractor, only: [:show, :edit, :update, :destroy]
 
 
+def tradeFilter
+   @contractors = Contractor.joins('LEFT OUTER JOIN contractors_trades ON contractors_trades.contractor_id = contractors.id').where('contractors_trades.trade_id' => params[:trade_id])
+   @contractors.each do |contractor|
+    @contractor_trades = ContractorsTrades.where('contractor_id' => contractor[:id])
+        @trades = Array.new
+        @contractor_trades.each do |ct|
+          #@trade = Trade.find(ct["trade_id"])
+          @trades  << Trade.find(ct["trade_id"])
+        end
+    end
+    @tradesMenu = Trade.all
+end 
   # GET /contractors
   # GET /contractors.json
   def index
@@ -14,9 +26,11 @@ class ContractorsController < ApplicationController
           @trades  << Trade.find(ct["trade_id"])
         end
     end
+    @tradesMenu = Trade.all
   end
 
    def import
+    @tradesMenu = Trade.all
     Contractor.import(params[:file])
     redirect_to root_url, notice: "Contractors imported."
   end
@@ -30,6 +44,7 @@ class ContractorsController < ApplicationController
           #@trade = Trade.find(ct["trade_id"])
           @trades  << Trade.find(ct["trade_id"])
         end
+         @tradesMenu = Trade.all
   end
 
   # GET /contractors/new
@@ -47,7 +62,9 @@ class ContractorsController < ApplicationController
           #@trade = Trade.find(ct["trade_id"])
           @selectedtrades  << Trade.find(ct["trade_id"])
         end
+         @tradesMenu = Trade.all
   end
+
 
   # POST /contractors
   # POST /contractors.json

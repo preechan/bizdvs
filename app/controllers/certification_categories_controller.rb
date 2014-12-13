@@ -9,6 +9,7 @@ class CertificationCategoriesController < ApplicationController
 
 
    def import
+    @tradesMenu = Trade.all
     CertificationCategory.import(params[:file])
     redirect_to root_url, notice: "Certification Categories imported."
   end

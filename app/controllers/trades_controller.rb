@@ -5,19 +5,23 @@ class TradesController < ApplicationController
 
   def index
     @trades = Trade.all
+    @tradesMenu = Trade.all
     respond_with(@trades)
   end
 
   def show
+    @tradesMenu = Trade.all
     respond_with(@trade)
   end
 
   def new
     @trade = Trade.new
+    @tradesMenu = Trade.all
     respond_with(@trade)
   end
 
   def edit
+    @tradesMenu = Trade.all
   end
 
   def create

@@ -15,8 +15,19 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a href="/contractors">Firms <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-      </ul>
+        <% if @tradesMenu != nil %>
+         <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+              Trades <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <% @tradesMenu.each  do |trade| %>
+                 <li role="presentation"> <%= link_to trade.name,tradeFilter_path(:trade_id => trade.id) %> </li>
+            <%end%>
+            </ul>
+          </li>
+          <% end %>
+     </ul>
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
@@ -25,18 +36,18 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Link</a></li>
-        <li>    <div class="dropdown">
-  <button class="btn btn-link dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-    Setup
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="/trades/new">Add New Trade</a></li>
+
+        <li role="presentation" class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+      Setup <span class="caret"></span>
+    </a>
+    <ul class="dropdown-menu" role="menu">
+     <li role="presentation"><a role="menuitem" tabindex="-1" href="/trades/new">Add New Trade</a></li>
     <li role="presentation"><a role="menuitem" tabindex="-1" href="/pages/importContractors">Import Contractors</a></li>
     <li role="presentation"><a role="menuitem" tabindex="-1" href="/pages/importCertificationCategories">Import Certification Categories</a></li>
-  </ul>
-</div>
-</li>
+    </ul>
+  </li>
+
       </ul>
 
     </div><!-- /.navbar-collapse -->
