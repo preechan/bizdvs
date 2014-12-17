@@ -1,6 +1,20 @@
 class ContractorsController < ApplicationController
   before_action :set_contractor, only: [:show, :edit, :update, :destroy]
 
+def export_email
+  if params[:contractor_ids]
+  @contractors = Contractor.find(params[:contractor_ids])
+    respond_to do |format|
+      format.html
+      format.csv do
+         headers['Content-Disposition'] = "attachment; filename=\"contractors-Emaillist\""
+        headers['Content-Type'] ||= 'text/csv'
+      end
+    end
+  else 
+  redirect_to action: 'index', status: 303
+  end
+end
 
 def tradeFilter
    @contractors = Contractor.joins('LEFT OUTER JOIN contractors_trades ON contractors_trades.contractor_id = contractors.id').where('contractors_trades.trade_id' => params[:trade_id])

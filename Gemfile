@@ -42,6 +42,7 @@ gem "paperclip", "~> 4.2"
 gem 'devise'
 gem "paperclip-dropbox", ">= 1.1.7"
 gem "figaro"
+gem 'jquery-turbolinks'
 
 group :production do 
 	gem 'pg'
