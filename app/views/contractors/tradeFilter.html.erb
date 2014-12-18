@@ -1,14 +1,16 @@
 
+
 <div class="row">
   <div class="col-md-2">
     <%= link_to 'New Contractor', new_contractor_path ,class:"btn btn-default"%>
   </div>
 
 
-<%= form_tag export_email_contractors_path(format: :csv) do %>
+<%= form_tag export_database_contractors_path(format: :csv) do %>
   <div class="col-md-2">
-<%= submit_tag "Export Email",class:"btn btn-default" %>
-</div>
+  <%= submit_tag "Export Database",class:"btn btn-default"%>
+  </div>
+    <%=submit_tag 'Export Email' ,class:"btn btn-default"%>
 </div>
 
 <table class="table table-striped">

@@ -17,8 +17,12 @@ Rails.application.routes.draw do
     collection { post :import }
   end
 
-   resources :contractors do
+  resources :contractors do
     collection { post :export_email }
+  end
+
+  resources :contractors do
+    collection { post :export_database }
   end
 
 
@@ -30,8 +34,8 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root 'contractors#index'
   get 'pages/importContractors'
-   get 'pages/importCertificationCategories'
-   get 'tradeFilter' => 'contractors#tradeFilter'
+  get 'pages/importCertificationCategories'
+  get 'tradeFilter' => 'contractors#tradeFilter'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
