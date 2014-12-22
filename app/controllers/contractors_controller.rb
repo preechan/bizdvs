@@ -59,7 +59,11 @@ end
   # GET /contractors
   # GET /contractors.json
   def index
+    if(params[:search])
+     @contractors = Contractor.search(params[:search]).order("contractors.name ASC")
+   else
     @contractors = Contractor.order('contractors.name ASC').where("city like 'SF' OR city like 'San Francisco'" )
+   end
     @contractors.each do |contractor|
     @contractor_trades = ContractorsTrades.where('contractor_id' => contractor[:id])
         @trades = Array.new
