@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_contractor_path(@contractor), class:"btn btn-default" %> |
+<% if can? :edit, Contractor %>
+<%= link_to 'Edit', edit_contractor_path(@contractor) , class:"btn btn-default" %> 
+<% end %>
 <%= link_to 'Back', contractors_path , class:"btn btn-default"%>
 </br>
 
@@ -98,8 +99,9 @@
 </div>
 <div class="col-md-12">
   <h4> Certification Categories </h4>
-  <%= link_to 'Add Certification Category',  new_certification_category_path(:contractor_id => @contractor.id ) ,class:"btn btn-default"%>
-
+      <% if can? :create, CertificationCategory %>
+  <%= link_to 'Add Certification Category',  new_certification_category_path(:contractor_id => @contractor.id ),class:"btn btn-default"%>
+  <% end %>
 <table class="table table-striped">
       <thead>
       <tr>

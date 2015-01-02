@@ -1,7 +1,12 @@
 
+
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 <div class="row">
   <div class="col-md-2">
-    <%= link_to 'New Contractor', new_contractor_path ,class:"btn btn-default"%>
+    <% if can? :create, Contractor %>
+    <%= link_to 'New Contractor', new_contractor_path,class:"btn btn-default"%>
+    <% end %>
   </div>
 
 
@@ -67,8 +72,10 @@
   </button>
   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
     <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><%= link_to 'Show', contractor %></a></li>
+    <% if can? :edit, Contractor %>
     <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><%= link_to 'Edit', edit_contractor_path(contractor) %></a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><%= link_to 'Destroy', contractor, method: :delete, data: { confirm: 'Are you sure?' } %></a></li>
+    <% end %>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><%= link_to 'Destroy', contractor, method: :delete, data: { confirm: 'Are you sure?' } if can? :destroy, Contractor %></a></li>
   </ul>
 </div>
         </td>

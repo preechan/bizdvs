@@ -2,7 +2,7 @@ class CertificationCategoriesController < ApplicationController
   before_action :set_certification_category, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
-
+  load_and_authorize_resource
   def certification
     @certification_categories = CertificationCategory.where(contractor_id: params[:contractor_id]).order("created_at DESC")
   end

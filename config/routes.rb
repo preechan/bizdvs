@@ -6,7 +6,9 @@ Rails.application.routes.draw do
 
   resources :certification_categories
 
-  devise_for :users
+ # devise_for :users
+ devise_for :users,  :controllers => { :registrations => "users/registrations"}
+
   resources :contractors
 
   resources :contractors do
@@ -36,6 +38,8 @@ Rails.application.routes.draw do
   get 'pages/importContractors'
   get 'pages/importCertificationCategories'
   get 'tradeFilter' => 'contractors#tradeFilter'
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
