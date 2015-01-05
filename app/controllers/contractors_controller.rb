@@ -96,7 +96,7 @@ end
   # GET /contractors/new
   def new
     @contractor = Contractor.new
-   
+    @trades = Trade.all
   end
 
   # GET /contractors/1/edit
