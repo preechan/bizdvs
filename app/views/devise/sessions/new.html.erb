@@ -1,7 +1,7 @@
 <h2>Log in</h2>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  Don't have an account yet? <%= link_to "Sign up", new_registration_path(resource_name), class:"btn btn-default" %><br />
+<%if can? :create, User %>  Don't have an account yet? <% end %> <%= link_to "Sign up", new_registration_path(resource_name) if can? :create, User, class:"btn btn-default" %><br />
 <% end -%>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
