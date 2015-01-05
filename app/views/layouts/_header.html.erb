@@ -36,8 +36,8 @@
       </form>
 
       <ul class="nav navbar-nav navbar-right">
-       <!--   <% if user_signed_in? %> -->
-        <li><%= link_to "Add New User", new_user_registration_path %></li>
+         <% if user_signed_in? %> 
+        <li><%= link_to "Add New User", new_user_registration_path if can? :create, User %></li>
         <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
      Logged in  <span class="caret"></span>
@@ -47,9 +47,9 @@
               <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>            
             </ul>
         </li>
-      <!--  <% else %> -->
+      <% else %>
                 <li><%= link_to "Sign In", new_user_session_path %></li>
-      <!--  <% end %> -->
+     <% end %> 
         <% if can? :create, Contractor%>
         <li role="presentation" class="dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">

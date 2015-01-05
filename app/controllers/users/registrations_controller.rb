@@ -5,7 +5,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
    before_filter :configure_permitted_parameters
  
   def check_permissions
-   #authorize! :create, resource
+   authorize! :create, resource
   end
 
   protected
