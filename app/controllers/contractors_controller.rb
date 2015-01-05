@@ -97,6 +97,7 @@ end
   def new
     @contractor = Contractor.new
     @trades = Trade.all
+    @selectedtrades = Array.new
   end
 
   # GET /contractors/1/edit
