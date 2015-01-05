@@ -21,9 +21,9 @@ if params[:contractor_ids]
     @contractors = Contractor.find(params[:contractor_ids])
     if params[:commit] == "Export Database"
         contractor_csv = CSV.generate do |csv|
-      csv << ["Name","License No","License Class","Bonding Capacity", "First Name", "Last Name","Address","City","State","Zip Code","Phone","Fax","Email","Trade","Certification Type","SF Certification Number","SF Vendor Number","Firm Size"]
+      csv << ["Name","License No","License Class","Bonding Capacity", "First Name", "Last Name","Address","City","State","Zip Code","Phone","Fax","Email","Trade","Certification Type","SF Certification Number","Ownership Type","SF Vendor Number","Firm Size"]
       @contractors.each do |contractor|
-        csv << [contractor.name, contractor.licenseNo,contractor.licenseClass,contractor.bondingcapacity,contractor.firstname,contractor.lastname,contractor.address,contractor.city,contractor.state,contractor.zipcode,contractor.phone,contractor.fax,contractor.email,contractor.trade,contractor.certificationType,contractor.sfCertificationNumber,contractor.sfVendorNumber,contractor.firmSize]  
+        csv << [contractor.name, contractor.licenseNo,contractor.licenseClass,contractor.bondingcapacity,contractor.firstname,contractor.lastname,contractor.address,contractor.city,contractor.state,contractor.zipcode,contractor.phone,contractor.fax,contractor.email,contractor.trade,contractor.certificationType,contractor.ownershipType,contractor.sfCertificationNumber,contractor.sfVendorNumber,contractor.firmSize]  
       end   
     end   
       send_data(contractor_csv, :type => 'text/csv', :filename => 'contractors-Database.csv')
