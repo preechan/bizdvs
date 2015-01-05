@@ -38,7 +38,7 @@ def self.as_csv
 end
 
   def self.search(search)
-      where('name LIKE ? OR address LIKE ? OR city LIKE ? OR zipcode LIKE ?', "%#{search}%","%#{search}%","%#{search}%","%#{search}%")
+      where('name LIKE ? OR address LIKE ? OR city LIKE ? OR zipcode LIKE ? OR firstname LIKE ? OR lastname LIKE ?', "%#{search}%","%#{search}%","%#{search}%","%#{search}%","%#{search}%","%#{search}%")
   end
 
 end
