@@ -1,6 +1,7 @@
 class ContractorsController < ApplicationController
   before_action :set_contractor, only: [:show, :edit, :update, :destroy]
 load_and_authorize_resource
+skip_authorize_resource  only: [:export_email,:export_database,:tradeFilter]
 def export_email
  if params[:contractor_ids]
     @contractors = Contractor.find(params[:contractor_ids])
