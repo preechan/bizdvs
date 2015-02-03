@@ -56,7 +56,25 @@ def tradeFilter
         end
     end
     @tradesMenu = Trade.all
+    @publicworksMenu  =  PublicWorksExp.all
+     @largepublicworksMenu  =  LargestPublicWorksProject.all
 end 
+
+
+def publicWorksFilter
+     @contractors = Contractor.joins('LEFT OUTER JOIN contractors_public_works_exps ON contractors_public_works_exps.contractor_id = contractors.id').where('contractors_public_works_exps.public_works_exp_id' => params[:public_works_exp_id])
+    @tradesMenu = Trade.all
+    @publicworksMenu  =  PublicWorksExp.all
+     @largepublicworksMenu  =  LargestPublicWorksProject.all
+end 
+
+def largePublicWorksFilter
+     @contractors = Contractor.joins('LEFT OUTER JOIN contractors_largest_public_works_projects ON contractors_largest_public_works_projects.contractor_id = contractors.id').where('contractors_largest_public_works_projects.largest_public_works_project_id' => params[:large_public_works_project_id])
+    @tradesMenu = Trade.all
+    @publicworksMenu  =  PublicWorksExp.all
+     @largepublicworksMenu  =  LargestPublicWorksProject.all
+end 
+
   # GET /contractors
   # GET /contractors.json
   def index
@@ -74,6 +92,8 @@ end
         end
     end
     @tradesMenu = Trade.all
+    @publicworksMenu  =  PublicWorksExp.all
+    @largepublicworksMenu  =  LargestPublicWorksProject.all
   end
 
    def import
@@ -99,7 +119,15 @@ end
           @selectedpwe  << PublicWorksExp.find(cp["public_works_exp_id"])
         end
 
+         @contractor_lpwp = ContractorsLargestPublicWorksProjects.where('contractor_id' => params[:id])
+        @selectedlpwp = Array.new
+        @contractor_lpwp.each do |cl|
+          @selectedlpwp  << LargestPublicWorksProject.find(cl["largest_public_works_project_id"])
+        end
+
          @tradesMenu = Trade.all
+          @publicworksMenu  =  PublicWorksExp.all
+          @largepublicworksMenu  =  LargestPublicWorksProject.all
   end
 
   # GET /contractors/new
@@ -107,13 +135,16 @@ end
     @contractor = Contractor.new
     @trades = Trade.all
     @publicworksexp = PublicWorksExp.all
+    @largestpublicworksproj = LargestPublicWorksProjects.all
     @selectedtrades = Array.new
     @selectedpwe = Array.new
+    @selectedlpwp = Array.new
   end
 
   # GET /contractors/1/edit
   def edit
     @publicworksexp = PublicWorksExp.all
+     @largestpublicworksproj = LargestPublicWorksProject.all
     @trades = Trade.all
       @contractor_trades = ContractorsTrades.where('contractor_id' => params[:id])
         @selectedtrades = Array.new
@@ -129,7 +160,14 @@ end
           @selectedpwe  << PublicWorksExp.find(cp["public_works_exp_id"])
         end
 
+        @contractor_lpwp = ContractorsLargestPublicWorksProjects.where('contractor_id' => params[:id])
+        @selectedlpwp = Array.new
+        @contractor_lpwp.each do |cl|
+          @selectedlpwp  << PublicWorksExp.find(cl["largest_public_works_project_id"])
+        end
+
          @tradesMenu = Trade.all
+          @publicworksMenu  =  PublicWorksExp.all
   end
 
 
@@ -142,6 +180,9 @@ end
 
     @publicworksexp = PublicWorksExp.where(:id => params[:publicworksexp_id])
     @contractor.public_works_exp << @publicworksexp 
+
+    @largestpublicworksproj = LargestPublicWorksProject.where(:id => params[:largestpublicworksproj_id])
+    @contractor.largest_public_works_projects << @largestpublicworksproj 
   
 #associate the selected trades to the contractors and create records in the join table
     respond_to do |format|
@@ -168,6 +209,11 @@ end
        @publicworksexp = PublicWorksExp.where(:id => params[:publicworksexp_id])
       @contractor.public_works_exp.destroy_all   #disassociate the already added organizers
       @contractor.public_works_exp << @publicworksexp 
+
+       @largestpublicworksproj = LargestPublicWorksProject.where(:id => params[:largestpublicworksproj_id])
+      @contractor.largest_public_works_project.destroy_all   #disassociate the already added organizers
+      @contractor.largest_public_works_project << @largestpublicworksproj 
+
       #associate the selected organizers to the event and create records in the join table
         format.html { redirect_to @contractor, notice: 'Contractor was successfully updated.' }
         format.json { render :show, status: :ok, location: @contractor }

@@ -38,7 +38,8 @@ Rails.application.routes.draw do
   get 'pages/importContractors'
   get 'pages/importCertificationCategories'
   get 'tradeFilter' => 'contractors#tradeFilter'
-
+get 'publicWorksFilter' => 'contractors#publicWorksFilter'
+get 'largepublicWorksFilter' => 'contractors#largePublicWorksFilter'
 
 
   # Example of regular route:

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  contractor_id: 1
+  largest_public_works_project_id: 1
+
+two:
+  contractor_id: 1
+  largest_public_works_project_id: 1

@@ -12,6 +12,8 @@ class Contractor < ActiveRecord::Base
 has_many :certificationCategories , dependent: :destroy
 has_and_belongs_to_many  :trades
 has_and_belongs_to_many  :public_works_exp
+has_and_belongs_to_many  :largest_public_works_project
+
 require 'csv'
 
   def self.import(file)

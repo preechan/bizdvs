@@ -1,0 +1,83 @@
+
+<div class="row">
+   <% if can? :create, Contractor %>
+  <div class="col-md-2">
+    <%= link_to 'New Contractor', new_contractor_path ,class:"btn btn-default"%>
+  </div>
+  <% end %>
+
+
+<%= form_tag export_database_contractors_path(format: :csv) do %>
+  <div class="col-md-2">
+  <%= submit_tag "Export Database",class:"btn btn-default"%>
+  </div>
+    <%=submit_tag 'Export Email' ,class:"btn btn-default"%>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th> <input type="checkbox" id="selecctall"/> Select/Unselect</th>
+      <th>  </th>
+      <th>Name</th>
+      <th colspan="4">Contact Details</th>
+      <th>License No</th>
+      <th>License Class</th>
+      <th>Bonding Capacity</th>
+      <th>Trade</th>
+      <th>Certification Type</th>
+      <th>Ownership Type</th>
+      <th>SF Certification Number</th>
+      <th>SF Vendor Number</th>
+      <th>Firm Size</th>
+      <th>Comments</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @contractors.each do |contractor| %>
+      <tr>
+      <td><%= check_box_tag "contractor_ids[]", contractor.id, false,class:"checkbox1" %></td>
+       <td> <%= image_tag contractor.logo.url(:thumb) %> </td> 
+        <td><%= link_to contractor.name, contractor %> </td>
+        <td colspan="4"><%= contractor.firstname %> <%= contractor.lastname %> </br> <%= contractor.address %> </br><%= contractor.city %> </br><%= contractor.state %> <%= contractor.zipcode %>
+          <br> Ph: <%= contractor.phone %>
+          <br> Fax:<%= contractor.fax %>
+           <br> <%= contractor.email %>
+        </td>
+        <td><%= contractor.licenseNo %></td>
+        <td><%= contractor.licenseClass %></td>
+        <td><%= contractor.bondingcapacity %></td>
+        <td>
+        <% contractor.trades.each do 
+        |trade| %>
+        <%= trade.name %><%= "," unless trade == contractor.trades.last %>
+        <% end %>
+      </td>
+        <td><%= contractor.certificationType %></td>
+        <td><%= contractor.ownershipType %></td>
+        <td><%= contractor.sfCertificationNumber %></td>
+        <td><%= contractor.sfVendorNumber %></td>
+         <td><%=contractor.firmSize %></td>
+        <td><%= contractor.comments %></td>
+        <td>
+          <div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+    Action
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><%= link_to 'Show', contractor %></a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><%= link_to 'Edit', edit_contractor_path(contractor) %></a></li>
+    <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><%= link_to 'Destroy', contractor, method: :delete, data: { confirm: 'Are you sure?' } %></a></li>
+  </ul>
+</div>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<% end %>
+<br>
+

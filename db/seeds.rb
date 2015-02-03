@@ -18,3 +18,11 @@ publicworksexp = PublicWorksExp.create([{ name: 'SF Public Works' },
 				{ name: 'Federal' },
 				{ name: 'Other' },
 				{ name: 'None' }])
+
+
+largestpublicworksproj = LargestPublicWorksProject.create([{ name: 'None' }, 
+				{ name: 'Under $100k' },
+				{ name: '$100k to $500k' },
+				{ name: '$500k to $1M' },
+				{ name: '$1M to $5M' },
+				{ name: 'Over $5M' }])

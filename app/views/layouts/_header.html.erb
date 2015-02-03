@@ -27,6 +27,30 @@
             </ul>
           </li>
           <% end %>
+           <% if @publicworksMenu != nil %>
+         <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+              Public Works (Experience) <span class="caret"></span>
+            </a>
+             <ul class="dropdown-menu" role="menu">
+              <% @publicworksMenu.each  do |pw| %>
+                 <li role="presentation"> <%= link_to pw.name,publicWorksFilter_path(:public_works_exp_id => pw.id) %> </li>
+            <%end%>
+            </ul>
+          </li>
+          <% end %>
+           <% if @largepublicworksMenu != nil %>
+         <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+              Large Public Works Projects <span class="caret"></span>
+            </a>
+             <ul class="dropdown-menu" role="menu">
+              <% @largepublicworksMenu.each  do |pw| %>
+                 <li role="presentation"> <%= link_to pw.name,largepublicWorksFilter_path(:large_public_works_project_id => pw.id) %> </li>
+            <%end%>
+            </ul>
+          </li>
+          <% end %>
      </ul>
      <form class="navbar-form navbar-left" role="search">
              <div class="form-group">
