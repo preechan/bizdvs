@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150102205942) do
+ActiveRecord::Schema.define(version: 20150203173740) do
 
   create_table "certification_categories", force: true do |t|
     t.string   "certificationCategory"
@@ -48,6 +48,9 @@ ActiveRecord::Schema.define(version: 20150102205942) do
     t.integer  "sfCertificationNumber"
     t.integer  "sfVendorNumber"
     t.integer  "firmSize"
+    t.boolean  "bonding"
+    t.decimal  "bondingLmtSngProj"
+    t.decimal  "bondingLmtAgg"
   end
 
   create_table "contractors_trades", force: true do |t|

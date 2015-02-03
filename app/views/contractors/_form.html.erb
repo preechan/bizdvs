@@ -79,27 +79,37 @@
     <%end%>
   </ul>
 </div>
-    <div class="form-group">
+  <div class="form-group">
     <%= f.label :certificationType,"Certification Type" %><br>
     <%= f.text_field :certificationType ,class:"form-control" %>
   </div>
-     <div class="form-group">
+  <div class="form-group">
     <%= f.label :ownershipType,"Ownership Type" %><br>
     <%= f.text_field :ownershipType ,class:"form-control" %>
   </div>
-     <div class="form-group">
+  <div class="form-group">
     <%= f.label :sfCertificationNumber,"SF Certification Number" %><br>
     <%= f.text_field :sfCertificationNumber,class:"form-control" %>
   </div>
-    <div class="form-group">
+  <div class="form-group">
     <%= f.label :sfVendorNumber,"SF Vendor Number" %><br>
     <%= f.text_field :sfVendorNumber ,class:"form-control" %>
   </div>
-    <div class="form-group">
+  <div class="form-group">
     <%= f.label :firmSize, "Firm Size" %><br>
     <%= f.text_field :firmSize ,class:"form-control" %>
   </div>
-  
+  <div class="form-group">
+     <%= f.check_box :bonding ,class:"checkbox" %> <%= f.label :bonding, "Bonding" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :bondingLmtSngProj, "Bonding Limit - Single Project" %><br>
+    <%= f.text_field :bondingLmtSngProj ,class:"form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :bondingLmtAgg, "Bonding Limit - Aggregate" %><br>
+    <%= f.text_field :bondingLmtAgg ,class:"form-control" %>
+  </div>
   </div>
   <div class="col-md-4">
     <div class="form-group">
