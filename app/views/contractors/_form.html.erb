@@ -112,6 +112,14 @@
   </div>
   </div>
   <div class="col-md-4">
+     <div class="checkbox">
+    <strong> Public Work (Experience) </strong>
+  <ul style="list-style-type:none;">
+     <% @publicworksexp.each  do |pwe| %>
+        <li> <%= check_box_tag  "publicworksexp_id[]",pwe.id,(checked = true if @selectedpwe.collect{|t| t.id}.include?(pwe.id)) %> <%= pwe.name %> </li>
+    <%end%>
+  </ul>
+</div>
     <div class="form-group">
     <%= f.label :comments %><br>
     <%= f.text_area :comments,class:"form-control" %>

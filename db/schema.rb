@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150203173740) do
+ActiveRecord::Schema.define(version: 20150203175621) do
 
   create_table "certification_categories", force: true do |t|
     t.string   "certificationCategory"
@@ -53,9 +53,22 @@ ActiveRecord::Schema.define(version: 20150203173740) do
     t.decimal  "bondingLmtAgg"
   end
 
+  create_table "contractors_public_works_exps", force: true do |t|
+    t.integer  "contractor_id"
+    t.integer  "public_works_exp_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "contractors_trades", force: true do |t|
     t.integer  "contractor_id"
     t.integer  "trade_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "public_works_exps", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

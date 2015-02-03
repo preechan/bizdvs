@@ -91,6 +91,14 @@ end
           #@trade = Trade.find(ct["trade_id"])
           @trades  << Trade.find(ct["trade_id"])
         end
+
+         @contractor_pwe = ContractorsPublicWorksExp.where('contractor_id' => params[:id])
+        @selectedpwe = Array.new
+        @contractor_pwe.each do |cp|
+          #@trade = Trade.find(ct["trade_id"])
+          @selectedpwe  << PublicWorksExp.find(cp["public_works_exp_id"])
+        end
+
          @tradesMenu = Trade.all
   end
 
@@ -98,18 +106,29 @@ end
   def new
     @contractor = Contractor.new
     @trades = Trade.all
+    @publicworksexp = PublicWorksExp.all
     @selectedtrades = Array.new
+    @selectedpwe = Array.new
   end
 
   # GET /contractors/1/edit
   def edit
-     @trades = Trade.all
+    @publicworksexp = PublicWorksExp.all
+    @trades = Trade.all
       @contractor_trades = ContractorsTrades.where('contractor_id' => params[:id])
         @selectedtrades = Array.new
         @contractor_trades.each do |ct|
           #@trade = Trade.find(ct["trade_id"])
           @selectedtrades  << Trade.find(ct["trade_id"])
         end
+
+        @contractor_pwe = ContractorsPublicWorksExp.where('contractor_id' => params[:id])
+        @selectedpwe = Array.new
+        @contractor_pwe.each do |cp|
+          #@trade = Trade.find(ct["trade_id"])
+          @selectedpwe  << PublicWorksExp.find(cp["public_works_exp_id"])
+        end
+
          @tradesMenu = Trade.all
   end
 
@@ -120,6 +139,10 @@ end
     @contractor = Contractor.new(contractor_params)
     @trades = Trade.where(:id => params[:trade_id])
     @contractor.trades << @trades 
+
+    @publicworksexp = PublicWorksExp.where(:id => params[:publicworksexp_id])
+    @contractor.public_works_exp << @publicworksexp 
+  
 #associate the selected trades to the contractors and create records in the join table
     respond_to do |format|
       if @contractor.save
@@ -141,6 +164,10 @@ end
       @trades = Trade.where(:id => params[:trade_id])
       @contractor.trades.destroy_all   #disassociate the already added organizers
       @contractor.trades << @trades 
+
+       @publicworksexp = PublicWorksExp.where(:id => params[:publicworksexp_id])
+      @contractor.public_works_exp.destroy_all   #disassociate the already added organizers
+      @contractor.public_works_exp << @publicworksexp 
       #associate the selected organizers to the event and create records in the join table
         format.html { redirect_to @contractor, notice: 'Contractor was successfully updated.' }
         format.json { render :show, status: :ok, location: @contractor }
