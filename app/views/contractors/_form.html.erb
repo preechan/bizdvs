@@ -100,7 +100,9 @@
     <%= f.text_field :firmSize ,class:"form-control" %>
   </div>
   <div class="form-group">
-     <%= f.check_box :bonding ,class:"checkbox" %> <%= f.label :bonding, "Bonding" %>
+    <%= f.label :bonding do %>
+   <p>  <%= f.check_box :bonding %> Bonding </p>
+   <% end %>
   </div>
   <div class="form-group">
     <%= f.label :bondingLmtSngProj, "Bonding Limit - Single Project" %><br>
