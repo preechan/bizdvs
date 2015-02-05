@@ -182,7 +182,7 @@ end
     @contractor.public_works_exp << @publicworksexp 
 
     @largestpublicworksproj = LargestPublicWorksProject.where(:id => params[:largestpublicworksproj_id])
-    @contractor.largest_public_works_projects << @largestpublicworksproj 
+    @contractor.largest_public_works_project << @largestpublicworksproj 
   
 #associate the selected trades to the contractors and create records in the join table
     respond_to do |format|
