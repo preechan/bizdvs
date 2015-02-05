@@ -135,7 +135,7 @@ end
     @contractor = Contractor.new
     @trades = Trade.all
     @publicworksexp = PublicWorksExp.all
-    @largestpublicworksproj = LargestPublicWorksProjects.all
+    @largestpublicworksproj = LargestPublicWorksProject.all
     @selectedtrades = Array.new
     @selectedpwe = Array.new
     @selectedlpwp = Array.new
