@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150205141458) do
+ActiveRecord::Schema.define(version: 20150209194509) do
 
   create_table "certification_categories", force: true do |t|
     t.string   "certificationCategory"
@@ -51,6 +51,10 @@ ActiveRecord::Schema.define(version: 20150205141458) do
     t.boolean  "bonding"
     t.integer  "bondingLmtSngProj"
     t.integer  "bondingLmtAgg"
+    t.string   "document_file_name"
+    t.string   "document_content_type"
+    t.integer  "document_file_size"
+    t.datetime "document_updated_at"
   end
 
   create_table "contractors_largest_public_works_projects", force: true do |t|

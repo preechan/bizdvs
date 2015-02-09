@@ -1,4 +1,16 @@
 class Contractor < ActiveRecord::Base
+
+  if Rails.env.development?
+  has_attached_file :document
+  else
+  has_attached_file :document,
+  :storage => :dropbox,
+  :dropbox_credentials => Rails.root.join("config/dropbox.yml"),
+  :path => ":style/:id/:filename"
+end
+  validates_attachment :document, content_type: { content_type: "application/pdf" }
+  
+
 	if Rails.env.development?
 		has_attached_file :logo, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "profile26.png"
 	else

@@ -22,7 +22,6 @@
   <thead>
     <tr>
       <th> <input type="checkbox" id="selecctall"/> Select/Unselect</th>
-      <th>  </th>
       <th>Name</th>
       <th colspan="4">Contact Details</th>
       <th>License No</th>
@@ -43,7 +42,6 @@
     <% @contractors.each do |contractor| %>
       <tr>
       <td><%= check_box_tag "contractor_ids[]", contractor.id, false,class:"checkbox1" %></td>
-       <td> <%= image_tag contractor.logo.url(:thumb) %> </td> 
         <td><%= link_to contractor.name, contractor %> </td>
         <td colspan="4"><%= contractor.firstname %> <%= contractor.lastname %> </br> <%= contractor.address %> </br><%= contractor.city %> </br><%= contractor.state %> <%= contractor.zipcode %>
           <br> Ph: <%= contractor.phone %>
