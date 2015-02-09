@@ -43,7 +43,7 @@
 
 <p>
   <% if @contractor.document_file_name %>
-    <%=  link_to "Download File Attachment", @contractor.document.url(:original, false)%>
+    <%=  link_to "Download File Attachment", @contractor.document.url(download: true)%>
   <% end %>
 </p>
 
