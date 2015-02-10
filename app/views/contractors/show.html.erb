@@ -43,7 +43,8 @@
 
 <p>
   <% if @contractor.document_file_name %>
-    <%=  link_to "Download File Attachment", @contractor.document.url(download: true)%>
+    <%=  link_to "Download File Attachment", @contractor.document.url(download: true)%> |
+    <%=  link_to "Delete File", deleteDocument_path(contractor_id: @contractor.id) %>
   <% end %>
 </p>
 

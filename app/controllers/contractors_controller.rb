@@ -224,6 +224,14 @@ end
     end
   end
 
+
+  def deleteDocument
+    @contractor = Contractor.find(params[:contractor_id])
+    @contractor.document = nil
+    @contractor.save
+    redirect_to contractor_path(@contractor.id)
+  end
+
   # DELETE /contractors/1
   # DELETE /contractors/1.json
   def destroy

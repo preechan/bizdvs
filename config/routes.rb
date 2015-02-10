@@ -40,6 +40,7 @@ Rails.application.routes.draw do
   get 'tradeFilter' => 'contractors#tradeFilter'
 get 'publicWorksFilter' => 'contractors#publicWorksFilter'
 get 'largepublicWorksFilter' => 'contractors#largePublicWorksFilter'
+get 'deleteDocument' => 'contractors#deleteDocument'
 
 
   # Example of regular route:
